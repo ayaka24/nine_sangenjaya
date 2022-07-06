@@ -1,0 +1,51 @@
+@media (min-width: 769px) {
+
+    .pc-only {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+    #header {
+        height: 100px;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: 1360px;
+        margin: auto;
+        padding: 0 16px;
+    }
+
+    .header_logo {
+        position: inherit;
+        max-width: 270px;
+        margin-top: 6px;
+    }
+
+    .pc-nav {
+        max-width: 600px;
+        width: 60%;
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                width: 20%;
+                margin: 0 10px;
+            }
+
+        }
+    }
+
+    .header-btn {
+        margin-left: 40px;
+    }
+}
