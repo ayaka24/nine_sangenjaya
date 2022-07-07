@@ -13,10 +13,10 @@ body {
   *font: x-small;
   background: #fff;
   color: #474747;
-  font-family: YakuHanJPs, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Yu Gothic", "メイリオ", "Hiragino Sans", sans-serif;
+  font-family: YakuHanJPs, "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   -webkit-text-size-adjust: 100%;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   box-sizing: border-box;
 }
@@ -131,12 +131,12 @@ img {
 }
 
 .title-font-family {
-  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-family: "Noto Serif JP", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
 .title-font-size {
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .text-center {
@@ -368,6 +368,7 @@ hamburger(ハンバーガーアイコン)
 }
 #feature_sec .feature_content .item .item_title {
   font-size: 2rem;
+  font-weight: 500;
   margin-top: 2.6rem;
   padding-bottom: 1.6rem;
   padding-left: 0.4rem;
@@ -400,6 +401,7 @@ hamburger(ハンバーガーアイコン)
 }
 #menu_sec .box .item_title {
   font-size: 2.4rem;
+  font-weight: 500;
   margin-top: 2.4rem;
 }
 #menu_sec .box .item_text {
@@ -481,6 +483,7 @@ hamburger(ハンバーガーアイコン)
 #flow_sec .flow_box .item .item_title {
   border-bottom: 1px solid #CBC7C1;
   padding-bottom: 1rem;
+  font-weight: 500;
 }
 #flow_sec .flow_box .item .item_title span {
   color: #7CBF3D;
