@@ -12,7 +12,7 @@ body {
   font: 13px/1.231;
   *font: x-small;
   background: #fff;
-  color: #474747;
+  color: #333333;
   font-family: YakuHanJPs, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Yu Gothic", "メイリオ", "Hiragino Sans", sans-serif;
   -webkit-text-size-adjust: 100%;
   font-size: 1.6rem;
@@ -204,6 +204,23 @@ img {
   font-weight: 600;
   letter-spacing: 0.2rem;
 }
+.header_button a {
+  position: relative;
+  left: -3px;
+}
+.header_button a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border: 0px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  margin-top: -3px;
+}
 
 /* 
 hamburger(ハンバーガーアイコン)
@@ -321,7 +338,7 @@ hamburger(ハンバーガーアイコン)
 }
 #hero_sec .hero_content .hero_title {
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.1rem;
 }
 #hero_sec .hero_content .hero_text {
@@ -336,6 +353,7 @@ hamburger(ハンバーガーアイコン)
   padding: 14px 16px;
   font-size: 1.2rem;
   font-weight: 600;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 #hero_sec .hero_img_sp {
   margin-top: 40px;
@@ -483,6 +501,7 @@ hamburger(ハンバーガーアイコン)
   padding: 2rem;
 }
 #flow_sec .flow_box .item .item_title {
+  font-weight: 600;
   border-bottom: 1px solid #CBC7C1;
   padding-bottom: 1rem;
 }
@@ -519,6 +538,7 @@ hamburger(ハンバーガーアイコン)
   max-width: 500px;
   width: 90%;
   margin: 2.4rem auto 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------------*
@@ -590,7 +610,7 @@ hamburger(ハンバーガーアイコン)
 }
 #access_sec .access_map {
   margin-top: 2.4rem;
-  height: 200px;
+  height: 260px;
 }
 
 /*--------------------------------------*
@@ -622,9 +642,29 @@ hamburger(ハンバーガーアイコン)
 }
 
 @media (min-width: 769px) {
+  /*--------------------------------------*
+  * Common
+  *--------------------------------------*/
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-size: 1.8rem;
+  }
   .pc-only {
     display: block;
   }
+  .sp-only {
+    display: none;
+  }
+  .title-font-size {
+    font-size: 4rem;
+  }
+  .inner {
+    max-width: 1186px;
+    margin: auto;
+  }
+  /*--------------------------------------*
+  * Header
+  *--------------------------------------*/
   .hamburger {
     display: none;
   }
@@ -645,20 +685,294 @@ hamburger(ハンバーガーアイコン)
     max-width: 270px;
     margin-top: 6px;
   }
+  .nav_area {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
   .pc-nav {
     max-width: 600px;
-    width: 60%;
   }
   .pc-nav ul {
     display: flex;
     align-items: center;
   }
   .pc-nav ul li {
-    width: 20%;
-    margin: 0 10px;
+    margin: 0 24px;
   }
-  .header-btn {
-    margin-left: 40px;
+  .header_button {
+    position: initial;
+    margin-left: 24px;
+    width: 238px;
+    padding: 16px 12px;
+    font-size: 1.8rem;
+  }
+  .header_button a {
+    position: relative;
+    left: -3px;
+  }
+  .header_button a::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    margin-top: -4px;
+  }
+  /*--------------------------------------*
+  * Hero
+  *--------------------------------------*/
+  #hero_sec {
+    min-height: 80vh;
+    background-image: url("../../img/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #hero_sec .hero_content {
+    margin-top: 0;
+    max-width: 1360px;
+  }
+  #hero_sec .hero_content .hero_title {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  #hero_sec .hero_content .hero_text {
+    font-size: 2rem;
+    max-width: 769px;
+    line-height: 2.1;
+  }
+  #hero_sec .hero_content .hero_button {
+    max-width: 330px;
+    font-size: 2rem;
+    padding: 16px 10px;
+    letter-spacing: 0.16rem;
+    margin-top: 32px;
+  }
+  /*--------------------------------------*
+  * Feature
+  *--------------------------------------*/
+  #feature_sec {
+    padding: 10.4rem 0;
+  }
+  #feature_sec .feature_title {
+    margin-bottom: 100px;
+  }
+  #feature_sec .feature_title::after {
+    width: 48px;
+  }
+  #feature_sec .feature_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  #feature_sec .feature_content .item {
+    width: 28%;
+  }
+  #feature_sec .feature_content .item .item_title {
+    font-size: 2.4rem;
+  }
+  /*--------------------------------------*
+  * Menu
+  *--------------------------------------*/
+  #menu_sec {
+    padding: 10.4rem 0 0;
+  }
+  #menu_sec .menu_title {
+    border-left: solid 8px #7CBF3D;
+    margin-bottom: 70px;
+  }
+  #menu_sec .box {
+    margin-bottom: 140px;
+  }
+  #menu_sec .box .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  #menu_sec .box .item .item_img {
+    width: 40%;
+  }
+  #menu_sec .box .item .item_right {
+    max-width: 640px;
+    width: 56%;
+  }
+  #menu_sec .box .item_title {
+    font-size: 3.4rem;
+    margin-top: 4px;
+  }
+  #menu_sec .box .item_comment {
+    padding: 1.6rem;
+  }
+  #menu_sec .box .price_title {
+    margin-top: 64px;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+  #menu_sec .box .price_table th {
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+    width: 30%;
+  }
+  #menu_sec .box .price_table td {
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+  }
+  /*--------------------------------------*
+  * Pointmenu
+  *--------------------------------------*/
+  #pointmenu_sec {
+    padding: 10.4rem 5.29vw;
+    max-width: 1152px;
+    margin: auto;
+  }
+  #pointmenu_sec .point_title {
+    font-size: 3.4rem;
+    margin-bottom: 2rem;
+  }
+  #pointmenu_sec .point_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  #pointmenu_sec .point_box .item {
+    width: 42%;
+    padding-left: 7vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+  }
+  #pointmenu_sec .point_box .item:first-child {
+    padding-right: 7vw;
+    padding-left: 0;
+    border-right: 1px solid #c4c4c4;
+  }
+  /*--------------------------------------*
+  * Flow
+  *--------------------------------------*/
+  #flow_sec {
+    padding: 10.4rem 0;
+  }
+  #flow_sec .flow_title {
+    margin-bottom: 3.2rem;
+  }
+  #flow_sec .flow_img {
+    margin: 8rem auto;
+  }
+  #flow_sec .flow_box .item {
+    padding: 3.2rem 4.8rem;
+  }
+  #flow_sec .flow_box .item .item_title {
+    font-size: 2.3rem;
+    padding-bottom: 2rem;
+  }
+  #flow_sec .flow_box .item .item_text {
+    padding-top: 2.4rem;
+  }
+  /*--------------------------------------*
+  * Reservation
+  *--------------------------------------*/
+  #reserve_sec {
+    padding: 15rem 0;
+  }
+  #reserve_sec .reserve_sub {
+    font-size: 2.3rem;
+  }
+  #reserve_sec .reserve_title {
+    font-size: 6rem;
+    margin-bottom: 3.2rem;
+  }
+  #reserve_sec .reserve_text {
+    font-size: 1.6rem;
+  }
+  #reserve_sec .reserve_button {
+    font-size: 1.8rem;
+    padding: 2rem;
+    margin-top: 3.2rem;
+  }
+  /*--------------------------------------*
+  * Instagram
+  *--------------------------------------*/
+  #insta_sec {
+    padding: 10.4rem 0;
+  }
+  #insta_sec .insta_title::after {
+    width: 48px;
+  }
+  #insta_sec #insta {
+    margin-top: 80px;
+  }
+  #insta_sec #insta .insta_feeds .insta_item {
+    width: 24%;
+  }
+  /*--------------------------------------*
+  * Access
+  *--------------------------------------*/
+  #access_sec {
+    padding: 10.4rem 0 12rem;
+  }
+  #access_sec .parking {
+    font-size: 1.4rem;
+    margin-top: 3.2rem;
+  }
+  #access_sec .adress {
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-top: 1rem;
+  }
+  #access_sec .access_table {
+    margin-top: 3.2rem;
+  }
+  #access_sec .access_table th {
+    font-size: 1.6rem;
+  }
+  #access_sec .access_table td {
+    font-size: 1.6rem;
+  }
+  #access_sec .access_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #access_sec .access_box .left {
+    width: 40%;
+  }
+  #access_sec .access_box .right {
+    width: 56%;
+  }
+  #access_sec .access_map {
+    height: 398px;
+    margin-top: 0;
+  }
+  /*--------------------------------------*
+  * Footer
+  *--------------------------------------*/
+  #footer {
+    padding: 4rem 0 6rem;
+  }
+  #footer .footer_inner {
+    display: flex;
+  }
+  #footer .footer_inner .footer-block1 {
+    margin-right: 12rem;
+  }
+  #footer .footer_inner .footer-block2 {
+    margin-top: 0;
+  }
+  .footer-lists li {
+    margin: 24px auto;
+  }
+}
+@media (min-width: 1500px) {
+  #hero_sec .hero_content {
+    width: 1360px;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
